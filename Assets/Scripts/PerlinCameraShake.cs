@@ -5,6 +5,9 @@ using UnityEngine;
 /// <summary>
 /// Shakes the camera in an organic way, based on Perlin noise.
 /// Supports any initial camera position and rotation, but camera should be steady, i.e. parented to another GameObject.
+/// 
+/// Original Author: baratgabor - https://unitylist.com/p/jro/Unity3D-Perlin-Camera-Shake
+/// Edited: Added dropdown for determining 2D vs 3D camera shake mode. 
 /// </summary>
 [RequireComponent(typeof(Camera))]
 public class PerlinCameraShake : MonoBehaviour
