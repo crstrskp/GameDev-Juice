@@ -131,15 +131,15 @@ public class PerlinCameraShake : MonoBehaviour
     {
         if (m_cameraShakeType == CameraShakeType.ThreeDimensional)
         {
-            _rotateAxisX = false;
-            _rotateAxisY = false;
-            _rotateAxisZ = false;
+            _translateAxisX = false;
+            _translateAxisY = false;
+            _translateAxisZ = false;
         }
         else if (m_cameraShakeType == CameraShakeType.TwoDimensional)
         {
-            _rotateAxisX = true;
-            _rotateAxisY = true;
-            _rotateAxisZ = true;
+            _translateAxisX = true;
+            _translateAxisY = true;
+            _translateAxisZ = true;
         }
     }
 
