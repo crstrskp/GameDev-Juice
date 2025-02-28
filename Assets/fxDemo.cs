@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class fxDemo : MonoBehaviour
 {
+    
+    [SerializeField] private GameObject fxPrefab;
+    
     public enum effectType { particle, vfxGraph }
     public effectType fxType;
     private TMP_Text label; 
     
-    [SerializeField] private GameObject fxPrefab; 
-
     void Awake()
     {
         label = GetComponentInChildren<TMP_Text>();
-        fxPrefab.SetActive(false);
+        fxPrefab.SetActive(!fxPrefab.activeSelf);
         label.text = fxPrefab.name;
     }
     
     public void Play()
     {
-        fxPrefab.SetActive(true);
+        fxPrefab.SetActive(!fxPrefab.activeSelf);
     }
-    
 }
