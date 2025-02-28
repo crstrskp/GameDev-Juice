@@ -6,7 +6,7 @@ public class fxDemo : MonoBehaviour
     
     [SerializeField] private GameObject fxPrefab;
     
-    public enum effectType { particle, vfxGraph }
+    public enum effectType { particle, vfxGraph, other }
     public effectType fxType;
     private TMP_Text label; 
     
