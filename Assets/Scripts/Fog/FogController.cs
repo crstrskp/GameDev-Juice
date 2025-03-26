@@ -20,8 +20,11 @@ public class FogController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("FogManager: No player instance with the tag 'Player' was found in the scene!");
-            return;
+            // Debug.LogError("FogManager: No player instance with the tag 'Player' was found in the scene!");
+            // return;
+            
+            // hijacking 'player' here: 
+            player = transform; 
         }
         
         // Instantiate
