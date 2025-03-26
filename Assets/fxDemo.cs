@@ -8,6 +8,8 @@ public class fxDemo : MonoBehaviour
     
     public enum effectType { particle, vfxGraph, other }
     public effectType fxType;
+    [Tooltip("If checked, the fx prefab will be both disabled and enabled on each press. If disabled, the fx will toggle on/off"), SerializeField] 
+    private bool oneShot;
     private TMP_Text label; 
     
     void Awake()
@@ -19,6 +21,14 @@ public class fxDemo : MonoBehaviour
     
     public void Play()
     {
-        fxPrefab.SetActive(!fxPrefab.activeSelf);
+        if (this.oneShot)
+        {
+            fxPrefab.SetActive(false);
+            fxPrefab.SetActive(true);
+        }
+        else
+        {
+            fxPrefab.SetActive(!fxPrefab.activeSelf);
+        }
     }
 }
